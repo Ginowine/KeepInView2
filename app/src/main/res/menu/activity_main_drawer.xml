@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single" >
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_proposal"
+            android:icon="@drawable/proposal_24dp"
+            android:title="Proposal" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_implementation"
+            android:icon="@drawable/implementation_24dp"
+            android:title="Implementation" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_comparison"
+            android:icon="@drawable/compare_black_24dp"
+            android:title="Comparison" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="More Info">
         <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/about"
+                android:title="About" />
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
@@ -29,8 +29,11 @@
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Send Feedback" />
         </menu>
     </item>
+
+
+
 
 </menu>

@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -80,15 +81,16 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_proposal) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            Toast.makeText(this, "Oh no! Can't fetch data from Internet! Please Check your Connectivity", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_implementation) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_comparison) {
 
-        } else if (id == R.id.nav_manage) {
+        }else if (id == R.id.nav_about){
 
-        } else if (id == R.id.nav_share) {
+        }else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
