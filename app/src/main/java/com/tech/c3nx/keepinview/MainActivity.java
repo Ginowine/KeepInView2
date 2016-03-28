@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_overview:
                 fragment = new OverviewFragment();
                 title  = "Budget Overview";
+
                 viewIsAtHome = true;
                 break;
 
@@ -137,6 +138,7 @@ public class MainActivity extends AppCompatActivity
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(title);
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
