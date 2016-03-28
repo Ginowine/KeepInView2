@@ -48,13 +48,15 @@
     <string name="rev_comment">FG share of Oil Revenue projections drastically drops from <b>N1.64T</b> in 2015 to <b>N820B</b> in 2016</string>
     <string name="h1">2016 BUDGET OVERVIEW</string>
     <string name="h2">as presented by President Buhari</string>
-    <string name="h3">Projected Expenditure</string>
-    <string name="h4">Projected Revenue</string>
+    <string name="h3">Projected \nExpenditure</string>
+    <string name="h4">Projected \nRevenue</string>
     <string name="n_oil">Non Oil: <b>N1.45T</b></string>
     <string name="oil">Oil: <b>N800B</b></string>
     <string name="revenue">Revenue: <b>N1.51T</b></string>
     <string name="unknown">Unknown: <b>N3.86T</b></string>
     <string name="ex_comment">This is the highest budget ever proposed</string>
-    <string name="last_year">2015 ***** N5T</string>
-    <string name="this_year">2016 ****** N6.08T</string>
+    <string name="last_year">2015 - N5T</string>
+    <string name="this_year">2016 - N6.08T</string>
+    <string name="buhari">This budget represents a major step in delivering a new opportunity for Nigeria. It demostrate our confident optimism that despite the challenging time, we have the will, resourceful and commitment to deliver prosperity to our people</string>
+    <string name="b_name">President Muhammadu Buhari, GCFR</string>
 </resources>
