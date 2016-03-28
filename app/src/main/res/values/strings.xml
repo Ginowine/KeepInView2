@@ -3,6 +3,58 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
+    <array name="sectors">
+        <item>AGRICULTURE</item>
+        <item>AUDITOR GENERAL</item>
+        <item>BUDGET AND NATIONAL PLANNING</item>
+        <item>CODE OF CONDUCT BUREAU</item>
+        <item>COMMUNICATION TECHNOLOGY</item>
+        <item>DEFENCE</item>
+        <item>EDUCATION</item>
+        <item>FEDERAL CHARACTER COMMISSION pdf</item>
+        <item>FINANCE</item>
+        <item>FISCAL RESPONSIBILITY COMMISSION</item>
+        <item>FOREIGN AFFAIRS </item>
+        <item>HEAD OF CIVIL SERVICE</item>
+        <item>HEALTH </item>
+        <item>ICPC</item>
+        <item>INDUSTRY TRADE AND INVESTMENT</item>
+        <item>INFORMATION AND CULTURE</item>
+        <item>INFRASTRUCTURE CONCESSIONARY REGULATORY COMMISSION</item>
+        <item>INTERIOR</item>
+        <item>JUSTICE</item>
+        <item>LABOUR AND EMPLOYMENT</item>
+        <item>NATIONAL ASSEMBLY</item>
+        <item>NATIONAL POPULATION COMMISSION</item>
+        <item>NATIONAL SALARIES INCOME AND WAGES COMMISSION</item>
+        <item>NATIONAL SECURITY ADVISER</item>
+        <item>NIGER DELTA</item>
+        <item>PETROLEUM</item>
+        <item>POLICE SERVICE COMMISSION</item>
+        <item>PRESIDENCY</item>
+        <item>REVENUE MOBILISATION </item>
+        <item>SCIENCE AND TECHNOLOGY</item>
+        <item>SECRETARY TO THE GOVERNMENT OF THE FEDERATION</item>
+        <item>SOLID MINERALS </item>
+        <item>SPECIAL DUTIES SGF</item>
+        <item>TRANSPORTATION</item>
+        <item>WATER RESOURCES</item>
+        <item>WOMEN AFFAIRS </item>
+        <item>WORKS POWER AND HOUSING</item>
+        <item>YOUTH AND SPORT DEVELOPMENT</item>
+
+    </array>
+    <string name="rev_comment">FG share of Oil Revenue projections drastically drops from <b>N1.64T</b> in 2015 to <b>N820B</b> in 2016</string>
+    <string name="h1">2016 BUDGET OVERVIEW</string>
+    <string name="h2">as presented by President Buhari</string>
+    <string name="h3">Projected Expenditure</string>
+    <string name="h4">Projected Revenue</string>
+    <string name="n_oil">Non Oil: <b>N1.45T</b></string>
+    <string name="oil">Oil: <b>N800B</b></string>
+    <string name="revenue">Revenue: <b>N1.51T</b></string>
+    <string name="unknown">Unknown: <b>N3.86T</b></string>
+    <string name="ex_comment">This is the highest budget ever proposed</string>
+    <string name="last_year">2015 ***** N5T</string>
+    <string name="this_year">2016 ****** N6.08T</string>
 </resources>

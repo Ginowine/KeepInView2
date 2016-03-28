@@ -3,6 +3,8 @@ package com.tech.c3nx.keepinview;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,7 +18,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    private boolean viewIsAtHome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        displayView(R.id.nav_overview);
+        navigationView.setCheckedItem(R.id.nav_overview);
+
     }
 
     @Override
@@ -48,8 +53,15 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+        }
+        if (!viewIsAtHome) { //if the current view is not the News fragment
+            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(this);
+            displayView(R.id.nav_overview);
+            navigationView.setCheckedItem(R.id.nav_overview);
+
         } else {
-            super.onBackPressed();
+            moveTaskToBack(true);  //If view is in News fragment, exit application
         }
     }
 
@@ -79,25 +91,63 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        displayView(item.getItemId());
+        return true;
+    }
+    public void displayView(int viewId) {
 
-        if (id == R.id.nav_proposal) {
-            // Handle the camera action
-            Toast.makeText(this, "Oh no! Can't fetch data from Internet! Please Check your Connectivity", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_implementation) {
+        Fragment fragment = null;
+        String title = getString(R.string.app_name);
 
-        } else if (id == R.id.nav_comparison) {
+        switch (viewId) {
+            case R.id.nav_overview:
+                fragment = new OverviewFragment();
+                title  = "Budget Overview";
+                viewIsAtHome = true;
+                break;
 
-        }else if (id == R.id.nav_about){
+            case R.id.nav_proposal:
+                fragment = new ProposalFragment();
+                title = "Budget Proposal";
+                viewIsAtHome = false;
+                break;
 
-        }else if (id == R.id.nav_share) {
+            case R.id.nav_implementation:
+                fragment = new ImplementFragment();
+                title = "Budget Implementation";
+                viewIsAtHome = false;
+                break;
 
-        } else if (id == R.id.nav_send) {
+            case R.id.nav_comparison:
+                fragment = new ComparisonFragment();
+                title = "Compare & Contrast";
+                viewIsAtHome = false;
+                break;
 
+            case R.id.nav_about:
+                break;
+
+            case R.id.nav_share:
+                break;
+
+            case R.id.nav_send:
+                break;
+
+        }
+
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            ft.commit();
+        }
+
+        // set the toolbar title
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-        return true;
+
     }
 }
