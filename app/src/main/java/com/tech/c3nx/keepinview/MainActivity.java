@@ -1,5 +1,6 @@
 package com.tech.c3nx.keepinview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -118,12 +119,21 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_about:
+                Intent intent = new Intent(this, About.class);
+                startActivity(intent);
                 break;
 
             case R.id.nav_share:
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "To Keep in viewing Nigerian 2016 Budget, download KeepInView fromm Google Play  https://play.google.com");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
                 break;
 
             case R.id.nav_send:
+                Intent intent1 = new Intent(this, Feedback.class);
+                startActivity(intent1);
                 break;
 
         }

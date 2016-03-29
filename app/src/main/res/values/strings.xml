@@ -4,7 +4,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
-    <array name="sectors">
+    <string-array name="sectors">
         <item>AGRICULTURE</item>
         <item>AUDITOR GENERAL</item>
         <item>BUDGET AND NATIONAL PLANNING</item>
@@ -12,7 +12,7 @@
         <item>COMMUNICATION TECHNOLOGY</item>
         <item>DEFENCE</item>
         <item>EDUCATION</item>
-        <item>FEDERAL CHARACTER COMMISSION pdf</item>
+        <item>FEDERAL CHARACTER COMMISSION</item>
         <item>FINANCE</item>
         <item>FISCAL RESPONSIBILITY COMMISSION</item>
         <item>FOREIGN AFFAIRS </item>
@@ -44,7 +44,7 @@
         <item>WORKS POWER AND HOUSING</item>
         <item>YOUTH AND SPORT DEVELOPMENT</item>
 
-    </array>
+    </string-array>
     <string name="rev_comment">FG share of Oil Revenue projections drastically drops from <b>N1.64T</b> in 2015 to <b>N820B</b> in 2016</string>
     <string name="h1">2016 BUDGET OVERVIEW</string>
     <string name="h2">as presented by President Buhari</string>
@@ -59,4 +59,6 @@
     <string name="this_year">2016 - N6.08T</string>
     <string name="buhari">This budget represents a major step in delivering a new opportunity for Nigeria. It demostrate our confident optimism that despite the challenging time, we have the will, resourceful and commitment to deliver prosperity to our people</string>
     <string name="b_name">President Muhammadu Buhari, GCFR</string>
+    <string name="title_activity_about">About Us</string>
+    <string name="title_activity_feedback">Feedback</string>
 </resources>

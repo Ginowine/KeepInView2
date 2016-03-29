@@ -2,10 +2,12 @@ package com.tech.c3nx.keepinview;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 
 /**
@@ -23,7 +25,12 @@ public class ProposalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_proposal, container, false);
+        View view = inflater.inflate(R.layout.fragment_proposal, container, false);
+        ListView listView = (ListView) view.findViewById(R.id.proposal_list);
+        listView.setAdapter(new SectorsAdapter(getActivity()));
+        return view;
+
     }
+
 
 }
