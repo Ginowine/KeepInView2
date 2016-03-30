@@ -20,6 +20,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private boolean viewIsAtHome;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         displayView(R.id.nav_overview);
         navigationView.setCheckedItem(R.id.nav_overview);
+
 
     }
 
@@ -87,16 +90,28 @@ public class MainActivity extends AppCompatActivity
         displayView(item.getItemId());
         return true;
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+    }
+
     public void displayView(int viewId) {
 
         Fragment fragment = null;
         String title = getString(R.string.app_name);
 
+
         switch (viewId) {
             case R.id.nav_overview:
                 fragment = new OverviewFragment();
                 title  = "Budget Overview";
-
                 viewIsAtHome = true;
                 break;
 
@@ -137,6 +152,7 @@ public class MainActivity extends AppCompatActivity
                 break;
 
         }
+
 
         if (fragment != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
